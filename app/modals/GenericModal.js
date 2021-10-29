@@ -10,10 +10,10 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import PropTypes from "prop-types";
-import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
 
-function FeedModal({
+import { colors } from "../../config/theme";
+
+function GenericModal({
   ismodalVisible,
   isSaved,
   setIsModalVisible,
@@ -93,9 +93,9 @@ function FeedModal({
                   onPress={handleReportPostEvent}
                   style={{ flex: 1, justifyContent: "center" }}
                 >
-                  <AppText style={[styles.itemText, { color: colors.red }]}>
+                  <Text style={[styles.itemText, { color: colors.red }]}>
                     Report
-                  </AppText>
+                  </Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.separator} />
@@ -104,9 +104,9 @@ function FeedModal({
                   onPress={handleInterestEvent}
                   style={{ flex: 1, justifyContent: "center" }}
                 >
-                  <AppText style={[styles.itemText, { color: colors.red }]}>
+                  <Text style={[styles.itemText, { color: colors.red }]}>
                     Not Interested
-                  </AppText>
+                  </Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.separator} />
@@ -115,7 +115,7 @@ function FeedModal({
                   onPress={handleBookEvent}
                   style={{ flex: 1, justifyContent: "center" }}
                 >
-                  <AppText style={styles.itemText}>Book Experience</AppText>
+                  <Text style={styles.itemText}>Book Experience</Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.separator} />
@@ -124,9 +124,9 @@ function FeedModal({
                   onPress={handleSaveEvent}
                   style={{ flex: 1, justifyContent: "center" }}
                 >
-                  <AppText style={styles.itemText}>
+                  <Text style={styles.itemText}>
                     {!isSaved ? "Save to Itinerary" : "Unsave from Itinerary"}
-                  </AppText>
+                  </Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.separator} />
@@ -135,7 +135,7 @@ function FeedModal({
                   onPress={handleShareEvent}
                   style={{ flex: 1, justifyContent: "center" }}
                 >
-                  <AppText style={styles.itemText}>Share With Friends</AppText>
+                  <Text style={styles.itemText}>Share With Friends</Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.separator} />
@@ -144,7 +144,7 @@ function FeedModal({
                   onPress={handleCommentEvent}
                   style={{ flex: 1, justifyContent: "center" }}
                 >
-                  <AppText style={styles.itemText}>Add Comment</AppText>
+                  <Text style={styles.itemText}>Add Comment</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -154,7 +154,7 @@ function FeedModal({
           <View
             style={[styles.cancelContainer, { marginBottom: insets.bottom }]}
           >
-            <AppText style={styles.cancelText}>Cancel</AppText>
+            <Text style={styles.cancelText}>Cancel</Text>
           </View>
         </TouchableOpacity>
       </>
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-FeedModal.propTypes = {
+GenericModal.propTypes = {
   setIsModalVisible: PropTypes.func.isRequired,
   setIsShareVisible: PropTypes.func.isRequired,
   setIsCommentVisible: PropTypes.func.isRequired,
@@ -214,4 +214,4 @@ FeedModal.propTypes = {
   isSaved: PropTypes.bool.isRequired,
 };
 
-export default FeedModal;
+export default GenericModal;

@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import { Animated, View, StyleSheet } from "react-native";
+import { Animated, View, StyleSheet, Text } from "react-native";
 
 import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
 import StyleAnimation from "./StyleAnimation";
 
 ReportAnimation = React.forwardRef(({}, ref) => {
@@ -49,10 +48,10 @@ ReportAnimation = React.forwardRef(({}, ref) => {
         ]}
       >
         <View style={styles.container}>
-          <AppText style={styles.text}>This post has been flagged.</AppText>
-          <AppText style={styles.text}>
+          <Text style={styles.text}>This post has been flagged.</Text>
+          <Text style={styles.text}>
             Loop Experience, Inc. has been notified.
-          </AppText>
+          </Text>
         </View>
       </Animated.View>
     </View>

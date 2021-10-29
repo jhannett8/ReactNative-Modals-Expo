@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import { Animated, View } from "react-native";
+import { Animated, View, Text } from "react-native";
 
 import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
 import StyleAnimation from "./StyleAnimation";
 
 ShareAnimation = React.forwardRef(({}, ref) => {
@@ -53,7 +52,7 @@ ShareAnimation = React.forwardRef(({}, ref) => {
             justifyContent: "center",
           }}
         >
-          <AppText
+          <Text
             style={{
               color: colors.white,
               fontSize: 16,
@@ -65,7 +64,7 @@ ShareAnimation = React.forwardRef(({}, ref) => {
             }}
           >
             Sent
-          </AppText>
+          </Text>
         </View>
       </Animated.View>
     </View>

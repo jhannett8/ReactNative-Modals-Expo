@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import { Animated, View, StyleSheet } from "react-native";
+import { Animated, View, StyleSheet, Text } from "react-native";
 
 import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
 import StyleAnimation from "./StyleAnimation";
 
 InterestAnimation = React.forwardRef(({}, ref) => {
@@ -45,10 +44,10 @@ InterestAnimation = React.forwardRef(({}, ref) => {
         ]}
       >
         <View style={styles.container}>
-          <AppText style={styles.text}>Thank you for your input.</AppText>
-          <AppText style={styles.text}>
+          <Text style={styles.text}>Thank you for your input.</Text>
+          <Text style={styles.text}>
             We will show fewer posts like this from now on.
-          </AppText>
+          </Text>
         </View>
       </Animated.View>
     </View>

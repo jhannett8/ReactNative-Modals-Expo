@@ -9,8 +9,7 @@ import {
 import { Swipeable } from "react-native-gesture-handler";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Like from "../inputs/Like";
-import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
+import { colors } from "../config/theme";
 import Numbers from "../dataDisplays/dataMasks/Numbers";
 
 const ListItemDeleteAction = ({ onPress }) => {
@@ -80,8 +79,8 @@ function Comment({ item, handleDelete }) {
           </View>
           <View style={styles.contentContainer}>
             <Text>
-              <AppText style={styles.handle}>{item.name}</AppText>{" "}
-              <AppText style={styles.text}>{item.comment}</AppText>
+              <Text style={styles.handle}>{item.name}</Text>{" "}
+              <Text style={styles.text}>{item.comment}</Text>
             </Text>
             <View
               style={{
@@ -91,11 +90,11 @@ function Comment({ item, handleDelete }) {
               }}
             >
               <Text style={{ width: 65 }}>
-                <AppText style={styles.text}>{item.timeOfComment}</AppText>
+                <Text style={styles.text}>{item.timeOfComment}</Text>
               </Text>
-              <AppText style={styles.text}>
+              <Text style={styles.text}>
                 <Numbers number={numberOfLikes} /> Likes
-              </AppText>
+              </Text>
             </View>
           </View>
           <View style={styles.likeContainer}>

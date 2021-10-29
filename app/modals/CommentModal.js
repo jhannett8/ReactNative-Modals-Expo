@@ -12,12 +12,10 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import PropTypes from "prop-types";
 import { colors } from "../../config/theme";
-
 import Numbers from "../components/Numbers";
 import commentList from "../dataObjects/FeedObjects/CommentData";
 import Comment from "../components/Comment";
 import Avatar from "../components/Avatar";
-import AppText from "../components/AppText";
 
 function CommentModal({
   userId,
@@ -102,15 +100,15 @@ function CommentModal({
         >
           <View style={styles.headerContainer}>
             <View style={styles.headerTitle}>
-              <AppText style={styles.headerTitleText}>
+              <Text style={styles.headerTitleText}>
                 <Numbers number={numberOfComments} /> comments
-              </AppText>
+              </Text>
             </View>
             <TouchableWithoutFeedback
               onPress={() => setIsCommentVisible(!isCommentVisible)}
             >
               <View style={styles.headerExit}>
-                <AppText style={styles.headerTitleText}>X</AppText>
+                <Text style={styles.headerTitleText}>X</Text>
               </View>
             </TouchableWithoutFeedback>
           </View>

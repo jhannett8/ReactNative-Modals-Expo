@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import { Animated, View } from "react-native";
+import { Animated, View, Text } from "react-native";
 
 import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
 import StyleAnimation from "./StyleAnimation";
 
 SaveAnimation = React.forwardRef(({ text }, ref) => {
@@ -53,7 +52,7 @@ SaveAnimation = React.forwardRef(({ text }, ref) => {
             justifyContent: "center",
           }}
         >
-          <AppText
+          <Text
             style={{
               color: colors.white,
               fontSize: 16,
@@ -65,7 +64,7 @@ SaveAnimation = React.forwardRef(({ text }, ref) => {
             }}
           >
             {text}
-          </AppText>
+          </Text>
         </View>
       </Animated.View>
     </View>

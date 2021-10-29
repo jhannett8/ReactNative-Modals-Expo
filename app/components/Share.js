@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
-import { colors } from "../../config/theme";
-import AppText from "../dataDisplays/AppText";
-import Avatar from "../dataDisplays/Avatar";
+import { StyleSheet, View, TouchableWithoutFeedback, Text } from "react-native";
+
+import { colors } from "../config/theme";
+import Avatar from "../components/Avatar";
 
 function Share({ item, onSelect }) {
   const [isSelected, setIsSelected] = useState(item.isItemSelected);
@@ -24,8 +24,8 @@ function Share({ item, onSelect }) {
           <View style={styles.avatarContainer}>
             <Avatar size="xs" image={item.image} />
             <View style={{ justifyContent: "center" }}>
-              <AppText style={styles.handle}>{item.handle}</AppText>
-              <AppText style={styles.level}>Level {item.level}</AppText>
+              <Text style={styles.handle}>{item.handle}</Text>
+              <Text style={styles.level}>Level {item.level}</Text>
             </View>
           </View>
           <View

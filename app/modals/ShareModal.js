@@ -8,6 +8,7 @@ import {
   Modal,
   Share,
   Keyboard,
+  Text,
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -16,7 +17,6 @@ import PropTypes from "prop-types";
 import { colors } from "../config/theme";
 import ProfileList from "../dataObjects/FeedObjects/ProfileList";
 import ShareComponent from "../components/Share";
-import AppText from "../components/AppText";
 
 function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
   const [masterlist, setMasterList] = useState([]);
@@ -184,7 +184,7 @@ function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
           <TouchableWithoutFeedback onPress={onSend}>
             <View style={styles.footerContainer}>
               <View style={styles.footerButton}>
-                <AppText
+                <Text
                   style={{
                     fontSize: 20,
                     fontWeight: "600",
@@ -192,7 +192,7 @@ function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
                   }}
                 >
                   SEND
-                </AppText>
+                </Text>
               </View>
             </View>
           </TouchableWithoutFeedback>
