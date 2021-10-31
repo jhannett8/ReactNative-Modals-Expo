@@ -2,8 +2,8 @@ export default [
   {
     Id: 1,
     authorId: 123456,
-    name: "Joseph Hannett",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person One",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our one comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -13,8 +13,8 @@ export default [
   {
     Id: 2,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Two",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our two comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -24,8 +24,8 @@ export default [
   {
     Id: 3,
     authorId: 123456,
-    name: "Joseph Hannett",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Three",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our three comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -35,8 +35,8 @@ export default [
   {
     Id: 4,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Four",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our four comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -47,8 +47,8 @@ export default [
   {
     Id: 5,
     authorId: 123456,
-    name: "Joseph Hannett",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Five",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our five comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -58,8 +58,8 @@ export default [
   {
     Id: 6,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Six",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our six comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -69,8 +69,8 @@ export default [
   {
     Id: 7,
     authorId: 123456,
-    name: "Joseph Hannett",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Seven",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our seven comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -80,8 +80,8 @@ export default [
   {
     Id: 8,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Eight",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our eight comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -91,8 +91,8 @@ export default [
   {
     Id: 9,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Nine",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our nine comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -103,8 +103,8 @@ export default [
   {
     Id: 10,
     authorId: 123456,
-    name: "Joseph Hannett",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Ten",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our ten comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -114,8 +114,8 @@ export default [
   {
     Id: 11,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Eleven",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our eleven comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -125,8 +125,8 @@ export default [
   {
     Id: 12,
     authorId: 123456,
-    name: "Joseph Hannett",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Twelve",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our twelve comment. This comment should extend a certain amount.",
     numberOfComments: 123,
@@ -136,8 +136,8 @@ export default [
   {
     Id: 13,
     authorId: 78901,
-    name: "Michael DeLucca",
-    image: require("../FeedImages/Hiker.jpg"),
+    name: "Person Thirteen",
+    image: require("../Images/Hiker.jpg"),
     comment:
       "This is our thirteen comment. This comment should extend a certain amount.",
     numberOfComments: 123,

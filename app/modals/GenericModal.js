@@ -7,11 +7,10 @@ import {
   Modal,
   TouchableWithoutFeedback,
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import PropTypes from "prop-types";
 
-import { colors } from "../../config/theme";
+import { colors } from "../config/theme";
 
 function GenericModal({
   ismodalVisible,
@@ -22,9 +21,7 @@ function GenericModal({
   handleSave,
   handleReport,
   handleInterest,
-  onNavigationBook,
 }) {
-  const insets = useSafeAreaInsets();
   const topFlex = 1;
   const bottomFlex = 1;
 
@@ -46,7 +43,6 @@ function GenericModal({
   };
   handleBookEvent = () => {
     setIsModalVisible(!ismodalVisible);
-    onNavigationBook();
   };
   handleCommentEvent = () => {
     setIsModalVisible(!ismodalVisible);
@@ -81,7 +77,7 @@ function GenericModal({
               bottom: 0,
               marginHorizontal: 15,
               marginVertical: 15,
-              backgroundColor: colors.charcoal,
+              backgroundColor: colors.darkGray,
               borderRadius: 10,
             },
           ]}
@@ -151,9 +147,7 @@ function GenericModal({
           </View>
         </View>
         <TouchableOpacity onPress={() => setIsModalVisible(!ismodalVisible)}>
-          <View
-            style={[styles.cancelContainer, { marginBottom: insets.bottom }]}
-          >
+          <View style={[styles.cancelContainer, { marginBottom: 40 }]}>
             <Text style={styles.cancelText}>Cancel</Text>
           </View>
         </TouchableOpacity>
@@ -174,7 +168,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: colors.lightGrey,
+    backgroundColor: colors.darkGray,
     opacity: 0.2,
     margin: 5,
   },
@@ -193,7 +187,7 @@ const styles = StyleSheet.create({
   },
   cancelContainer: {
     height: 50,
-    backgroundColor: colors.charcoal,
+    backgroundColor: colors.darkRed,
     flexDirection: "row",
     padding: 5,
     marginHorizontal: 15,
@@ -209,7 +203,6 @@ GenericModal.propTypes = {
   handleSave: PropTypes.func.isRequired,
   handleReport: PropTypes.func.isRequired,
   handleInterest: PropTypes.func.isRequired,
-  onNavigationBook: PropTypes.func.isRequired,
   ismodalVisible: PropTypes.bool.isRequired,
   isSaved: PropTypes.bool.isRequired,
 };

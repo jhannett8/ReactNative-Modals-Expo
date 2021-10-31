@@ -5,6 +5,7 @@ export const colors = {
   darkGray: `#a9a9a9`,
   darkRed: `#8b0000`,
   slategray: `#708090`,
+  blue: "#001A72",
 };
 
 export const theme = {
@@ -34,7 +35,7 @@ export const icon = {
 export const shadows = {
   text: {
     backgroundColor: "transparent",
-    textShadowColor: colors.charcoal,
+    textShadowColor: colors.darkGray,
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 2,
   },

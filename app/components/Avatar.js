@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Image } from "react-native";
 
-import { theme } from "../../config/theme";
+import { theme } from "../config/theme";
 import PropTypes from "prop-types";
 
 const Avatar = ({ image, size, mh, mv }) => {
@@ -18,7 +18,7 @@ const Avatar = ({ image, size, mh, mv }) => {
       ? theme.avatar.md
       : theme.avatar.md;
 
-  const placeholder = require("../../assets/avatar-stock-ph.jpg");
+  const placeholder = require("../dataObjects/Images/Hiker.jpg");
 
   let marginHorizontal = mh !== undefined ? mh : 8;
   let marginVertical = mv !== undefined ? mv : 5;
@@ -36,7 +36,7 @@ const Avatar = ({ image, size, mh, mv }) => {
     <Image
       onError={() => setValid(false)}
       style={avatarContainer}
-      source={valid ? image : placeholder}
+      source={image ? image : placeholder}
       defaultSource={placeholder}
     />
   );

@@ -43,7 +43,7 @@ function Share({ item, onSelect }) {
                 width: 30,
                 borderRadius: 15,
                 borderWidth: 1,
-                borderColor: colors.lightGrey,
+                borderColor: colors.darkGray,
               }}
             ></View>
           </View>
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     height: 60,
     paddingTop: 3,
-    backgroundColor: colors.charcoal,
+    backgroundColor: colors.darkGray,
   },
   separator: {
     height: 1,
-    backgroundColor: colors.lightGrey,
+    backgroundColor: colors.darkRed,
     opacity: 0.2,
     margin: 3,
   },

@@ -10,12 +10,10 @@ import {
   Keyboard,
   Text,
 } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import PropTypes from "prop-types";
-
+import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 import { colors } from "../config/theme";
-import ProfileList from "../dataObjects/FeedObjects/ProfileList";
+import ProfileList from "../dataObjects/Objects/ProfileList";
 import ShareComponent from "../components/Share";
 
 function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
@@ -23,8 +21,6 @@ function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
   const [filteredList, setFilteredList] = useState([]);
   const [selectedList, setSelectedList] = useState([]);
   const [search, setSearch] = useState("");
-
-  const insets = useSafeAreaInsets();
   const flexAboveModal = 3;
   const flexOfModal = 7;
 
@@ -139,14 +135,12 @@ function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
 
       {/* Share Modal: Seperated by Header and Flalist (profiles)  */}
       <View style={{ flex: flexOfModal }}>
-        <View
-          style={[{ flex: 1, marginBottom: insets.bottom }, styles.container]}
-        >
+        <View style={[{ flex: 1, marginBottom: 40 }, styles.container]}>
           <View style={styles.searchContainer}>
             <View style={styles.searchInputContainer}>
               <View style={styles.searchInputText}>
                 <View style={{ paddingVertical: 5, paddingHorizontal: 7 }}>
-                  <Icon name="search" fill={colors.white} size={17} />
+                  <FontAwesome name="search" color={colors.white} size={17} />
                 </View>
                 <TextInput
                   style={styles.text}
@@ -203,19 +197,19 @@ function ShareModal({ isShareVisible, setIsShareVisible, handleSend }) {
 }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.charcoal,
+    backgroundColor: colors.darkGray,
     borderRadius: 10,
   },
   separator: {
     height: 1,
-    backgroundColor: colors.lightGrey,
+    backgroundColor: colors.darkRed,
     opacity: 0.1,
     margin: 5,
   },
   searchContainer: {
     flexDirection: "row",
     bottom: 0,
-    backgroundColor: colors.charcoal,
+    backgroundColor: colors.darkGray,
     height: 60,
     alignItems: "center",
     justifyContent: "center",
@@ -224,7 +218,7 @@ const styles = StyleSheet.create({
     width: "85%",
     borderRadius: 15,
     borderWidth: 2,
-    borderColor: colors.grey,
+    borderColor: colors.white,
   },
   searchInputText: {
     flexDirection: "row",

@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import { Swipeable } from "react-native-gesture-handler";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Like from "../inputs/Like";
+import Like from "./Like";
 import { colors } from "../config/theme";
-import Numbers from "../dataDisplays/dataMasks/Numbers";
+import Numbers from "./Numbers";
 
 const ListItemDeleteAction = ({ onPress }) => {
   return (
@@ -74,7 +74,7 @@ function Comment({ item, handleDelete }) {
             <Image
               resizeMode="contain"
               style={styles.avatar}
-              source={require("../../assets/FeedData/FeedImages/Hiker.jpg")}
+              source={require("../dataObjects/Images/Hiker.jpg")}
             />
           </View>
           <View style={styles.contentContainer}>
@@ -124,10 +124,10 @@ const styles = StyleSheet.create({
   commentContainer: {
     flexDirection: "row",
     paddingBottom: 20,
-    backgroundColor: colors.charcoal,
+    backgroundColor: colors.slategray,
   },
   deleteContainer: {
-    backgroundColor: colors.danger,
+    backgroundColor: colors.darkRed,
     width: 70,
     justifyContent: "center",
     alignItems: "center",

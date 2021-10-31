@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Animated, View, Text } from "react-native";
 
-import { colors } from "../../config/theme";
+import { colors } from "../config/theme";
 import StyleAnimation from "./StyleAnimation";
 
 SaveAnimation = React.forwardRef(({ text }, ref) => {
@@ -46,7 +46,7 @@ SaveAnimation = React.forwardRef(({ text }, ref) => {
       >
         <View
           style={{
-            backgroundColor: colors.charcoal,
+            backgroundColor: colors.darkGray,
             borderRadius: 15,
             alignItems: "center",
             justifyContent: "center",

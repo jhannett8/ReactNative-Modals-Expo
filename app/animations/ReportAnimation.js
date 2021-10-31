@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Animated, View, StyleSheet, Text } from "react-native";
 
-import { colors } from "../../config/theme";
+import { colors } from "../config/theme";
 import StyleAnimation from "./StyleAnimation";
 
 ReportAnimation = React.forwardRef(({}, ref) => {

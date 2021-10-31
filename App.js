@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 //Animations
@@ -83,6 +83,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      {/* <SaveAnimation
+        ref={animationSaveRef}
+        text={isSaved ? "Saved" : "Unsaved"}
+      />
+      <ShareAnimation ref={animationShareRef} />
+      <ReportAnimation ref={animationReportRef} />
+      <InterestAnimation ref={animationInterestRef} /> */}
       {/* Icons */}
       <View style={styles.iconContainer}>
         <TouchableWithoutFeedback onPress={() => setIsCommentVisible(true)}>
@@ -102,16 +109,9 @@ export default function App() {
         </TouchableWithoutFeedback>
       </View>
       {/* Animations */}
-      <SaveAnimation
-        ref={animationSaveRef}
-        text={isSaved ? "Saved" : "Unsaved"}
-      />
-      <ShareAnimation ref={animationShareRef} />
-      <ReportAnimation ref={animationReportRef} />
-      <InterestAnimation ref={animationInterestRef} />
       {/* Modals*/}
       <CommentModal
-        userId={postData.user.userId}
+        //userId={userId}
         setIsCommentVisible={setIsCommentVisible}
         isCommentVisible={isCommentVisible}
         setNumberOfComments={setNumberOfComments}
@@ -149,6 +149,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     paddingHorizontal: 40,
+    position: "absolute",
   },
   icon: {
     flex: 1,

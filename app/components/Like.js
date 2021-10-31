@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, TouchableWithoutFeedback } from "react-native";
 
 import PropTypes from "prop-types";
-
+import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 import { colors } from "../config/theme";
 import Numbers from "./Numbers";
 
@@ -22,7 +22,7 @@ const Like = ({ color, handleLike, isLiked, numberOfLikes, hSize, tSize }) => {
   return (
     <TouchableWithoutFeedback onPress={handleLike}>
       <View style={styles.likes}>
-        <FontAwesome name="Heart" size={likeSize} color={likeColor} />
+        <FontAwesome name="heart" size={likeSize} color={likeColor} />
         <Text style={text}>
           <Numbers number={numberOfLikes} />
         </Text>

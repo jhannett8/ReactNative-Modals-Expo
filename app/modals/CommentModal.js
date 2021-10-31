@@ -9,11 +9,11 @@ import {
   TextInput,
   KeyboardAvoidingView,
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import PropTypes from "prop-types";
-import { colors } from "../../config/theme";
+import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
+import { colors } from "../config/theme";
 import Numbers from "../components/Numbers";
-import commentList from "../dataObjects/FeedObjects/CommentData";
+import commentList from "../dataObjects/Objects/CommentData";
 import Comment from "../components/Comment";
 import Avatar from "../components/Avatar";
 
@@ -27,7 +27,6 @@ function CommentModal({
   const [list, setList] = useState([]);
   const [text, setText] = useState("");
 
-  const insets = useSafeAreaInsets();
   const flexAboveModal = 3;
   const flexOfModal = 7;
 
@@ -68,7 +67,7 @@ function CommentModal({
         Id: 101,
         authorId: 123456,
         name: "Joseph Hannett",
-        image: require("../../assets/FeedData/FeedImages/Hiker.jpg"),
+        image: require("../dataObjects/Images/Hiker.jpg"),
         comment: text,
         numberOfLikes: 0,
         timeOfComment: "just now",
@@ -93,8 +92,8 @@ function CommentModal({
       <View style={{ flex: flexOfModal }}>
         <View
           style={{
-            marginBottom: 100 + insets.bottom,
-            backgroundColor: colors.charcoal,
+            marginBottom: 40,
+            backgroundColor: colors.slategray,
             borderRadius: 10,
           }}
         >
@@ -126,12 +125,7 @@ function CommentModal({
       {/* Input Feild to add Comment, Positioned at the bottom of the screen*/}
       {/* Independant from Parent Modal to allow for keyboard adjustment*/}
       <KeyboardAvoidingView behavior="position">
-        <View
-          style={[
-            styles.commentInputContainer,
-            { paddingBottom: insets.bottom },
-          ]}
-        >
+        <View style={[styles.commentInputContainer, { paddingBottom: 40 }]}>
           <Avatar size="xs" />
           <View style={styles.commentInputText}>
             <TextInput
@@ -184,7 +178,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: colors.lightGrey,
+    backgroundColor: colors.white,
     opacity: 0.1,
     margin: 5,
   },
@@ -192,11 +186,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     flexDirection: "row",
     bottom: 0,
-    backgroundColor: colors.charcoal,
+    backgroundColor: colors.slategray,
     paddingTop: 10,
   },
   commentInputText: {
-    borderColor: colors.grey,
+    borderColor: colors.white,
     borderRadius: 20,
     borderWidth: 1,
     flex: 1,
